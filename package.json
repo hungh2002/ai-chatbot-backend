@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env DEBUG=* node --watch src/server.js",
+    "production": "cross-env NODE_ENV=production npm install & pm2 start src/server.js --name chatbot-backend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungh2002/ai-chatbot-backend.git"
+  },
+  "author": "hungh2002",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungh2002/ai-chatbot-backend/issues"
+  },
+  "homepage": "https://github.com/hungh2002/ai-chatbot-backend#readme",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.16.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "socket.io": "^4.7.5"
+  }
+}
